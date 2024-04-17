@@ -1,12 +1,4 @@
-body {
-    width: 100vw;
-    height: 100vh;
-    background-image: url(/images/fox.pn);
-    background-color: rgb(36, 32, 32);
-    background-size: cover;
-    background-position: center center;
-    
-}
+
 
 .center {
     text-align: center;
@@ -22,4 +14,21 @@ body {
 .row {
     padding-left: 2%;
     padding-right: 2%;
+}
+
+.cara {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 25px;
+}
+
+.modal-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.modal-title {
+    width: 100%;
 }
