@@ -1,0 +1,25 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/images/fox.pn);
+    background-color: rgb(36, 32, 32);
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+.center {
+    text-align: center;
+    color: blueviolet;
+}
+
+.b {
+    margin: auto;
+    word-wrap: break-word;
+    width: 60%; 
+  }
+
+.row {
+    padding-left: 2%;
+    padding-right: 2%;
+}
