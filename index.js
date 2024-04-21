@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
+import httpProxy from 'http-proxy';
 
 dotenv.config(); // Load environment variables from .env file
 
@@ -11,6 +12,14 @@ const __dirname = dirname(__filename);
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+// Proxy setup
+const proxy = httpProxy.createProxyServer();
+
+// Proxy requests to /app2 to the second Node.js server running on port 3001
+app.use('/app2', (req, res) => {
+    proxy.web(req, res, { target: 'http://localhost:3001' });
+});
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
