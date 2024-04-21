@@ -13,10 +13,7 @@ const __dirname = dirname(__filename);
 const app = express();
 const port = process.env.PORT;
 
-app.get('/appdev', function(req, res) {
-    // Handle the request to /app2
-    res.send('This is the /app2 endpoint');
-});
+
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -29,7 +26,7 @@ app.set('views', join(__dirname, 'views'));
 
 app.get
 // Route for the home page
-app.get('/app2', (req, res) => {
+app.get('/appdev', (req, res) => {
     // Render the index.ejs template
     res.render('index.ejs');
 });
